@@ -70,7 +70,7 @@ html { /*Задаем всему макету шрифт, чтобы соотв 
     font-weight: 600;
     color: var(--main-color);
     font-size: 18px;
-    transition: color .3s linear;
+    transition: color .3s ease;
 }
 
 .header__nav__link:hover {
@@ -137,7 +137,7 @@ html { /*Задаем всему макету шрифт, чтобы соотв 
 .btn-big {
     background-color: var(--btn-color);
     font-size: 24px;
-    transition: background-color .3s linear;
+    transition: background-color .3s ease;
 }
 
 .btn-big:hover {
@@ -236,7 +236,7 @@ color: white;
     font-size: var(--btn-size);
     transition-property: background-color, border;
     transition-duration: .3s;
-    transition-timing-function: linear;
+    transition-timing-function: ease;
 }
 
 .about__part__left__btn:hover {
@@ -293,6 +293,11 @@ line-height: 32px;
 letter-spacing: 0em;
 text-align: left;
 }
+
+.work {
+    margin-bottom: 100px;
+}
+
 .work__info__heading {
     font-size: 48px;
     font-weight: 400;
@@ -312,22 +317,33 @@ text-align: left;
     display: flex;
 }
 
-.work__nav__link {
+.tab-content {
+    display: none;
+}
+
+.tab-content-active {
+    display: flex;
+}
+
+.tabs__btn {
+background-color: transparent;
+border: 0px;
 font-size: 18px;
 font-weight: 400;
 line-height: 32px;
 letter-spacing: 0em;
 text-align: left;
 color: var(--main-color);
-transition: color .3s linear;
+transition: color .3s ease;
+cursor: pointer;
 }
 
-.work__nav__link:hover {
+.tabs__btn:hover {
     color: var(--btn-color);
 }
 
 .work__nav__link:not(:last-child) {
-    margin-right: 85px;
+    margin-right: 80px;
 }
 
 .work__left__heading {
@@ -368,7 +384,7 @@ color: var(--main-color);
 .work__btn__descr {
     background-color: var(--btn-color);
     margin-right: 32px;
-    transition: background-color .3s linear;
+    transition: background-color .3s ease;
 }
 
 .work__btn__descr:hover {
@@ -376,14 +392,15 @@ color: var(--main-color);
 }
 
 .work__btn__treaty {
-    border: 1px solid var(--main-color);
+    border:0px;
+    outline: 1px solid var(--main-color);
     color: var(--main-color);
     font-weight: 400;
     font-size: 16px;
     background-color: transparent;
     transition-property: background-color, color;
     transition-duration: .3s;
-    transition-timing-function: linear;
+    transition-timing-function: ease;
 }
 
 .work__btn__treaty:hover {
@@ -434,7 +451,7 @@ text-align: left;
 
 .footer__nav__link {
     color: var(--footer-color);
-    transition: color .3s linear;
+    transition: color .3s ease;
 }
 
 .footer__nav__link:hover {
@@ -498,12 +515,12 @@ padding-left: 120px;
 
 .input:hover {
     border-color: var(--btn-color);
-    transition: border-color .3s linear;
+    transition: border-color .3s ease;
 }
 
 .textarea:hover {
     border-color: var(--btn-color);
-    transition: border-color .3s linear;
+    transition: border-color .3s ease;
 }
 
 .footer__button__container {
@@ -515,7 +532,7 @@ padding-left: 120px;
     background-color: var(--btn-color);
     padding: 18px 50px;
     font-size: 14px;
-    transition: background-color .3s linear;
+    transition: background-color .3s ease;
 }
 
 .footer__btn__descr:hover {
